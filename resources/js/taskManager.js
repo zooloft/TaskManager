@@ -54,7 +54,7 @@ const createTaskHtml = (taskId, taskName, taskDescription, assignedTo, dueDate, 
 //Stores addTask, render, getTaskById, save, load, deleteTask, getTaskById, the this.tasks array, and the current id
 export class TaskManager {
     constructor(currentId = 0) {
-        let this.tasks = [];
+        let tasks = [];
         this.currentId = currentId;
     }
 
