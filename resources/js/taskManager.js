@@ -54,7 +54,7 @@ const createTaskHtml = (taskId, taskName, taskDescription, assignedTo, dueDate, 
 //Stores addTask, render, getTaskById, save, load, deleteTask, getTaskById, the this.tasks array, and the current id
 export class TaskManager {
     constructor(currentId = 0) {
-        let tasks = [];
+        this.tasks = [];
         this.currentId = currentId;
     }
 
@@ -112,11 +112,12 @@ export class TaskManager {
 
     // takes everything out of local storage and stores them inside of the this.tasks and the current id
     load() {
+        if (this.tasks.length !== 0) {
             let tasksJSON = localStorage.getItem('tasks');
             this.tasks = JSON.parse(tasksJSON);
             let currentId = localStorage.getItem('currentId');
             this.currentId = Number(currentId);
-
+         }
         }
         //It excludes the task that is selected for removal and stores the rest in a new array called newTasks. This.tasks is updated to newTasks.
 
