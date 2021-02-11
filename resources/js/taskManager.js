@@ -96,10 +96,7 @@ export class TaskManager {
             document.getElementById('task-list-ul').innerHTML = tasksHtml;
             document.getElementById('TLheading').style.display = 'block';
         }
-        // if tasks array now empty, hide Tasks List heading
-        if (this.tasks != null && this.tasks.length === 0) {
-            document.getElementById('TLheading').style.display = 'none';
-        }
+
     }
 
     // Step 5 --> takes this.tasks and the current id and stores them inside of the the browsers local storage
