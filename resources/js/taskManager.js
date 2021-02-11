@@ -61,7 +61,7 @@ export class TaskManager {
     /* STEP 3 --> addTask stores the values inside of the input fields and places them into an object. This object is than added to the this.tasks array */
     addTask(name, description, assignedTo, dueDate, status = 'To Do') {
         this.currentId++;
-        this.tasks.push({
+        this.tasks.push(){
             id: this.currentId,
             name: name,
             description: description,
