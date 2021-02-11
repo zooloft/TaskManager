@@ -73,7 +73,7 @@ export class TaskManager {
 
     /* STEP 4 --> If the task array is not empty, each task in task array is converted to HTML using createTaskHtml and stored in a new array called taskHtmlList. Then, the tasksHTMLList array is converted into a string and stored as the innerHTML of the empty task list */
     render() {
-        if (this.tasks.length > 0) {
+        if (this.tasks != null && this.tasks.length > 0) {
             const taskHtmlList = [];
             this.tasks.forEach(task => {
                 let fullDate = new Date(task.dueDate);
