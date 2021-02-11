@@ -97,7 +97,7 @@ export class TaskManager {
             document.getElementById('TLheading').style.display = 'block';
         }
         // if tasks array now empty, hide Tasks List heading
-        if (this.tasks === null || this.tasks.length === 0) {
+        if (this.tasks.length == 0) {
             document.getElementById('TLheading').style.display = 'none';
         }
     }
